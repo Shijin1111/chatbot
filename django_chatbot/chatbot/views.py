@@ -27,8 +27,8 @@ def ask_openai(message):
     history=[
     ]
     )
-
-    res = chat_session.send_message(message)
+    
+    res = chat_session.send_message(f"{message}reduce the time complexity of this code using any method")
     print(res)
     return res.text
 

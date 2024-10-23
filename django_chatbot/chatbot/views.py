@@ -5,7 +5,7 @@ import os
 import google.generativeai as genai
 
 def ask_openai(message):
-    genai.configure(api_key="AIzaSyAjr1v-NGJb8qix3HXgQABxQViwMgdSCkI")
+    genai.configure(api_key="AIzaSyDUX756PqIuqKJpftGreqSHkzYL9pweNAk")
 
     # Create the model
     generation_config = {
@@ -28,7 +28,7 @@ def ask_openai(message):
     ]
     )
     
-    res = chat_session.send_message(f"{message}reduce the time complexity of this code using any method")
+    res = chat_session.send_message(f"{message}reduce the time complexity of this code using any method.")
     print(res)
     return res.text
 
@@ -42,4 +42,4 @@ def chatbot(request):
         message = request.POST.get('message')
         response = ask_openai(message)
         return JsonResponse({'message':message,'response':response})
-    return render(request,'chatbot.html')
+    return render(request,'testtemplate.html')

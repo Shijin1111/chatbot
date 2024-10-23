@@ -66,33 +66,10 @@
 
 {% block content %}
 <div class="chat-container">
-  <div class="card flex-grow-1">
-    <div class="card-header bg-primary text-white">Chat</div>
-    <div class="card-body messages-box">
-      
-      <ul class="list-unstyled messages-list">
-        
-        <li class="message received">
-          <div class="message-text">
-            <div class="message-sender">
-              <b>AI Chatbot</b>
-            </div>
-            <div class="message-content">
-              Hi, I am your AI Chatbot, you can ask me anything.
-            </div>
-          </div>
-        </li>
-      </ul>
-      
-    </div>
-    <br><br>
-    <br><br>
-    <br><br>
-  </div>
   <form class="message-form">
     {%csrf_token%}
     <div class="input-group">
-      <input type="text" class="form-control message-input" placeholder="Type your message...">
+      <div id="editor" style="height: 400px; width: 600px;">Write your program here</div>
       <div class="input-group-append">
         <button type="submit" class="btn btn-primary btn-send">Send</button>
       </div>
